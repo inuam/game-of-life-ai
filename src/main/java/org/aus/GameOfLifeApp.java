@@ -1,4 +1,4 @@
-package org.example;
+package org.aus;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;

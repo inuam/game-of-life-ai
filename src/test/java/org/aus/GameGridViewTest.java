@@ -1,4 +1,4 @@
-package org.example;
+package org.aus;
 
 import org.gol.GameGrid;
 import org.gol.GameGridView;

@@ -1,4 +1,4 @@
-package org.example;
+package org.aus;
 
 /**
  * Represents the grid state for Conway's Game of Life simulation.

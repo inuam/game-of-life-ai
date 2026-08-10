@@ -1,4 +1,4 @@
-package org.example;
+package org.aus;
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
