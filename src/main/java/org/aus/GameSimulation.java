@@ -13,6 +13,7 @@ public class GameSimulation {
     private long updateInterval = 500_000_000;
     private Runnable onUpdate;
     private boolean running = false;
+    private int generation = 0;
 
     /**
      * Constructs a GameSimulation with the given grid.
@@ -63,6 +64,7 @@ public class GameSimulation {
             public void handle(long now) {
                 if (now - lastUpdate >= updateInterval) {
                     grid.nextGeneration();
+                    generation++;
                     onUpdate.run();
                     lastUpdate = now;
                 }
@@ -90,6 +92,7 @@ public class GameSimulation {
         stop();
         this.grid = newGrid;
         lastUpdate = 0;
+        generation = 0;
     }
 
     /**
@@ -108,5 +111,14 @@ public class GameSimulation {
      */
     public GameGrid getGrid() {
         return grid;
+    }
+
+    /**
+     * Gets the current generation number.
+     *
+     * @return the generation count
+     */
+    public int getGeneration() {
+        return generation;
     }
 }

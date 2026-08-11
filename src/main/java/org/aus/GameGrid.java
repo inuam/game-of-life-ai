@@ -6,8 +6,8 @@ package org.aus;
  */
 public class GameGrid {
     private boolean[][] grid;
-    private int rows;
-    private int cols;
+    private final int rows;
+    private final int cols;
 
     /**
      * Constructs a new GameGrid with specified dimensions.

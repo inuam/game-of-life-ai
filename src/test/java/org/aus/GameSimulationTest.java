@@ -97,4 +97,16 @@ public class GameSimulationTest {
         assertEquals(20, simulation.getGrid().getRows(), "Rows should match");
         assertEquals(30, simulation.getGrid().getCols(), "Columns should match");
     }
+
+    @Test
+    public void testGenerationStartsAtZero() {
+        assertEquals(0, simulation.getGeneration(), "Generation should start at 0");
+    }
+
+    @Test
+    public void testResetResetsGenerationCounter() {
+        GameGrid newGrid = new GameGrid(5, 5);
+        simulation.reset(newGrid);
+        assertEquals(0, simulation.getGeneration(), "Reset should reset generation to 0");
+    }
 }

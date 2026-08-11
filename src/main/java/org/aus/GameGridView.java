@@ -10,8 +10,8 @@ import javafx.scene.paint.Color;
  * Displays alive cells in blue on a dark navy background with yellow grid lines.
  */
 public class GameGridView extends Canvas {
-    private GameGrid grid;
-    private int cellSize;
+    private final GameGrid grid;
+    private final int cellSize;
     private Runnable onCellToggle;
 
     /**
